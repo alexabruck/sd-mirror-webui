@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="simple.min.css" />
+    <style>
+      .flex {
+        display: flex;
+      }
+      .block {
+        display: block;
+      }
+      .flex-basis-50 {
+        flex-basis: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Stable Diffusion Mirror</h1>
+    <p>
+      Please enter your Stable Diffusion API URL (automatic1111 public gradio
+      url, in the shape of: https://xxxxxxxx-xxxx-xxxx.gradio.live)!
+    </p>
+    <input
+      type="text"
+      name=""
+      id="input-apiurl"
+      placeholder="Stable diffusion API URL"
+    />
+    <video
+      autoplay
+      playsinline
+      webkit-playsinline
+      muted
+      hidden
+      width="50"
+      height="50"
+      id="video-element"
+    ></video>
+    <div>
+      <p>Here you can enter your prompt addition! (Optional)</p>
+      <input
+        type="text"
+        name=""
+        id="input-prompt-addition"
+        placeholder="Prompt addition"
+      />
+      <h1 id="prompt-para"></h1>
+
+      <canvas id="canvas-element"></canvas>
+      <button id="submit-button">Submit!</button>
+      <div class="flex">
+        <div class="flex-basis-50">
+          <img id="input-snapshot" src="" alt="" />
+          <strong class="block">How do you look like to CLIP?</strong>
+          <p id="input-img-caption"></p>
+          <p>
+            <input
+              type="checkbox"
+              name=""
+              id="input-useinterrogate"
+              checked
+            />Use this text in prompt
+          </p>
+        </div>
+        <div class="flex-basis-50">
+          <img id="result-img" src="" alt="" />
+          <strong class="block">Prompt</strong>
+          <p id="result-img-caption"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
